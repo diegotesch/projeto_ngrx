@@ -22,6 +22,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { reducers, metaReducers } from './store';
+import { EffectsModule } from '@ngrx/effects';
+import { CustomerSupportEffects } from './store/effects/customer-support.effects';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { reducers, metaReducers } from './store';
       metaReducers,
     }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot([CustomerSupportEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent],
