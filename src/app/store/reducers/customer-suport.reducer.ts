@@ -1,4 +1,4 @@
-import * as fromSupportActions from './../actions/customer-support.actions';
+import * as fromSupportActions from '../actions/customer-support.actions';
 // import { sendingCustomerSupportMessage, sendMessageStatus } from './../actions/customer-support.actions';
 import { Action, createReducer, on } from '@ngrx/store';
 

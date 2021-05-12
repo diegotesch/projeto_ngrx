@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { customerSuportFeatureKey, State } from '../redurecrs/customer-suport.reducer';
+import { customerSuportFeatureKey, State } from '../reducers/customer-suport.reducer';
 
 export const selectCustomerSupportFeature = createFeatureSelector<State>(
   customerSuportFeatureKey
