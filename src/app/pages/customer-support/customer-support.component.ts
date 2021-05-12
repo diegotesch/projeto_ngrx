@@ -1,4 +1,4 @@
-import { sendingCustomerSupportMessage } from './../../store/actions/customer-support.actions';
+import { clearForm, sendingCustomerSupportMessage } from './../../store/actions/customer-support.actions';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CustomerSupportService } from 'src/app/shared/services/customer-support.service';
@@ -35,6 +35,7 @@ export class CustomerSupportComponent implements OnInit {
   }
 
   clearFeedback() {
-    this.isSendSuccess = null;
+    this.store.dispatch(clearForm());
+    // this.isSendSuccess = null;
   }
 }
